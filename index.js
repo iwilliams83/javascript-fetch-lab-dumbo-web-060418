@@ -30,7 +30,7 @@ function createIssue() {
     "body": issueBody
   };
   fetch(`https://api.github.com/repos/${repo}/issues`, {
-    method: 'POST',
+    method: 'post',
     headers: {
       Authorization: `token ${token}`
     },
@@ -59,7 +59,7 @@ function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab';
   // /repos/:owner/:repo/forks
   fetch(`https://api.github.com/repos/${repo}/forks`,{
-    method: 'POST',
+    method: 'post',
     headers: {
       Authorization: `token ${token}`
     }
